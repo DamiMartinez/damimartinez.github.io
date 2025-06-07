@@ -10,5 +10,6 @@ I love creating things that solve real problems, especially when it involves wra
 
 Always up for interesting conversations about AI, data, or whatever you're building.
 
+---
 
-*Based in Spain | Python enthusiast | Weekend hacker*
+*Based in Barcelona · Python enthusiast · Weekend hacker*
