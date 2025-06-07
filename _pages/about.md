@@ -13,3 +13,4 @@ Always up for interesting conversations about AI, data, or whatever you're build
 ---
 
 *Based in Barcelona · Python enthusiast · Weekend hacker*
+**Contact:** damian.martinez.carmona@gmail.com , [LinkedIn](https://linkedin.com/in/damian-martinez-carmona)
