@@ -21,8 +21,8 @@ avatar:
 # Includes an icon in the footer for each username you enter
 footer-links:
   email: damian.martinez.carmona@gmail.com
-  github: https://github.com/DamiMartinez
-  linkedin: https://www.linkedin.com/in/damian-martinez-carmona
+  github: DamiMartinez
+  linkedin: damian-martinez-carmona
   rss: rss
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
