@@ -4,8 +4,6 @@ title: Lessons Learned from Using Google ADK - Part 1
 categories: [AI, Google ADK, Agent Development]
 ---
 
-# Lessons Learned from Using Google ADK - Part 1 
-
 I have been working with the **Google Agent Development Kit (ADK)** for the past couple of months. While it is a powerful framework, the documentation is limited and I had to solve several unexpected problems on my own.  
 
 Here is a summary of the main issues I faced and how I solved them.  
@@ -14,7 +12,7 @@ Here is a summary of the main issues I faced and how I solved them.
 `google-cloud-aiplatform[adk,agent-engines]==1.100.0`.  
 Since this is very new technology, the SDK is evolving quickly and the Google team is constantly fixing and improving it.  
 
----
+
 
 ## 1. `errlog=None` is required for MCP tools  
 If you use MCP tools, you must set `errlog=None` in the `MCPToolset`. Without it, the agent will not deploy correctly on VertexAI.  
@@ -34,7 +32,7 @@ tools = [
 ]
 ```
 
----
+
 
 ## 2. Remember `load_dotenv()`  
 If you forget to load environment variables with `dotenv`, your agent will deploy, but it will fail at runtime with vague error messages.  
@@ -49,7 +47,7 @@ load_dotenv()
 # continue with your agent setup...
 ```
 
----
+
 
 ## 3. The `thought_signature` error  
 Sometimes the agent suddenly stops responding and only returns strange hashes instead of messages:  
@@ -71,13 +69,13 @@ The solution is to either:
 - Update the `vertexai` SDK to the latest version, or  
 - Downgrade the model version in your configuration.  
 
----
+
 
 ## 4. RAG does not work with sub-agents  
 If you want to use **RAG**, you need to attach it with `agenttool` to the root agent.  
 It does not work reliably with sub-agents, so always keep RAG on the main agent definition.  
 
----
+
 
 ## 5. User and session IDs  
 You can access `user_id` and `session_id` from the **callback context**.  
@@ -98,14 +96,14 @@ def before_agent_callback(callback_context: CallbackContext) -> None:
     callback_context.state['session_id'] = session_id
 ```
 
----
+
 
 ## 6. Use region `us-central1`  
 When deploying your agent, I recommend using **`us-central1`**. This region receives new features first.  
 
 If you deploy in another region, you may find that some features are missing or that the deployment fails without clear explanations.  
 
----
+
 
 ## General Lessons
 The main lesson I learned is that **deploying an AI agent is not easy**. Even with a framework like ADK, the first deployment will take time and effort.  
@@ -117,7 +115,7 @@ To make it easier for others, I created a simple **base agent** that you can use
 
 It includes a deployment script and basic setup. I plan to extend it with more features such as MCP tools, callbacks, evaluations, and more — if people find it useful.  
 
----
+
 
 ## Final note  
 The ADK has great potential, but many of these details are undocumented.  
