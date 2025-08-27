@@ -6,7 +6,6 @@ categories: [AI, Tools, Productivity]
 
 Over the past months, I’ve been working a lot on developing AI agents and experimenting with different tools. Here’s an overview of the main AI tools and resources I currently use on a daily basis.
 
----
 
 ## 1. My IDE: Cursor
 
@@ -30,7 +29,6 @@ To optimize memory and reduce token usage, don’t keep everything in a single c
 
 💲 **Pricing:** Cursor Pro costs **$20/month**, and in normal daily development you rarely hit the usage limits.
 
----
 
 ## 2. Gemini CLI
 
@@ -40,7 +38,6 @@ A great thing about Gemini CLI is that it gives access to the **latest Gemini mo
 
 💲 **Pricing tip:** For daily development, Gemini CLI is almost always free. Normally you don’t reach the usage limit of the top-tier **gemini-2.5-pro** model, and if you ever do, you can just switch to the **gemini-2.0** model.
 
----
 
 ## 3. Terminal Setup  
 
@@ -48,13 +45,11 @@ For package management and running my projects I use:
 - **Poetry**  
 - **uv**
 
----
 
 ## 4. Running Models Locally  
 
 When I want to run models locally, I use **[Ollama](https://ollama.com/)**. It makes downloading and testing models on your own machine easy.
 
----
 
 ## 5. Building and Deploying AI Agents  
 
@@ -65,7 +60,6 @@ For deployment, I rely on **Vertex AI Agent Builder**:
 - Easy and quick to use.
 - Very cost-effective compared to other platforms.
 
----
 
 ## 6. Research & Exploration  
 
@@ -80,7 +74,6 @@ Another great tool is **[NotebookLM](https://notebooklm.google.com/)**:
 - It builds an interactive research assistant powered by Gemini.
 - Perfect for exploring technical papers or custom datasets.
 
----
 
 ## 7. AI for Media & Content Generation  
 
@@ -91,7 +84,6 @@ For creative tasks, I also experiment with:
 - **Imagen** (Google) → images  
 - **Veo 3** (Google) → videos
 
----
 
 ## 8. Useful Resources  
 
@@ -106,7 +98,6 @@ Here’s a list of resources I keep going back to:
 - ▶️ [Anthropic Streams](https://www.youtube.com/@anthropic-ai/streams)  
 - ▶️ [AI with Brandon (YouTube channel)](https://www.youtube.com/@aiwithbrandon)
 
----
 
 ## Final Thoughts  
 
