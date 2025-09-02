@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My New Development Workflow - I Don't Write Code Anymore
+title: My New Development Workflow
 categories: [AI, Productivity, Coding]
 ---
 
