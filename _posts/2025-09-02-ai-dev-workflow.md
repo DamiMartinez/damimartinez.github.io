@@ -18,6 +18,17 @@ It’s the playbook for any AI assistant working on my projects. It describes th
 
 Before starting a task, the agent reads it and follows it. This way, no matter which coding assistant I’m using, everything stays consistent.  
 
+📌 More about `AGENTS.md`: [agents.md](https://agents.md/)
+
+### A few notes on `AGENTS.md` support:
+- In **Cursor**, for version `1.5` or below, `AGENTS.md` only works when placed in the **root of the project**. Nested `AGENTS.md` files in subdirectories are planned for **v1.6** (see [Cursor docs](https://docs.cursor.com/en/context/rules#agents-md)).  
+- In **Gemini CLI**, the default context file is `GEMINI.md`. To make it use `AGENTS.md`, you need to update your `.gemini/settings.json` like this:  
+
+```json
+{
+  "contextFileName": "AGENTS.md"
+}
+```
 
 ## Templates for Every Task
 
