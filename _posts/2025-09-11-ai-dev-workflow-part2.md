@@ -4,9 +4,7 @@ title: Adding References & Context Sources to My AI Workflow
 categories: [AI, Productivity, Coding]
 ---
 
-This is a continuation (Part 2) of my previous post: [My New Development Workflow - I Don’t Write Code Anymore](https://damimartinez.github.io/ai-dev-workflow/).  
-
-In this article I want to share how I manage **references and context sources** to help my coding agents (Cursor, Gemini CLI, etc.) stay accurate and up-to-date.
+This is a continuation (Part 2) of my previous post: [My New Development Workflow - I Don’t Write Code Anymore](https://damimartinez.github.io/ai-dev-workflow/). In this article I want to share how I manage **references and context sources** to help my coding agents (Cursor, Gemini CLI, etc.) stay accurate and up-to-date.
 
 
 ## References Folder in `ai_docs`
@@ -29,7 +27,7 @@ Another source of context I rely on heavily is the **Context7 MCP server** ([ups
 - This helps ensure the agent has access to the freshest documentation, which reduces errors or outdated assumptions.
 
 
-## Recycling Previous Implementations as References
+## Recycling Repos as References
 
 One more thing I often do: I include an existing, well-structured repository as a reference, so I can reuse patterns, structure or boilerplate instead of starting fully from scratch.  
 
