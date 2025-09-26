@@ -4,13 +4,13 @@ title: Open Sourcing My AI Development Workflow Templates
 categories: [AI, Productivity, Open Source]
 ---
 
+This time, I’m excited to share something practical: an open source repo with the **templates and playbooks I use to drive my AI-coding workflows**:  
+👉 [github.com/DamiMartinez/ai-dev-workflow-templates](https://github.com/DamiMartinez/ai-dev-workflow-templates)
+
 This is the third article in my AI workflow series (after  
 [My New Development Workflow](https://damimartinez.github.io/ai-dev-workflow/)  
 and  
 [Adding References & Context Sources](https://damimartinez.github.io/ai-dev-workflow-part2/)).  
-
-This time, I’m excited to share something practical: an open source repo with the **templates and playbooks I use to drive my AI-coding workflows**:  
-👉 [github.com/DamiMartinez/ai-dev-workflow-templates](https://github.com/DamiMartinez/ai-dev-workflow-templates)
 
 
 ## Why this repo?
