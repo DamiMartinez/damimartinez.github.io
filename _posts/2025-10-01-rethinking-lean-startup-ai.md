@@ -4,11 +4,11 @@ title: Rethinking Lean Startup for the Age of AI
 categories: [AI, Product, Startup, Error Analysis, Evals]
 ---
 
-> *“Everyone understands that knowing your customer is key to success. But in the AI era, understanding how your LLM behaves is just as important — and it’s the part most teams neglect.”*
+> *“Everyone understands that knowing your customer is key to success. But in the AI era, understanding how your LLM behaves is just as important. And it’s the part most teams neglect.”*
 
 ## Introduction
 
-I’ve been revisiting *The Lean Startup* by Eric Ries, and while its Build → Measure → Learn loop remains timeless, generative AI introduces a new observable — and improvable — element to that loop: the LLM’s behavior. If your product relies on a language model, validated learning must include not only customers but also the model’s outputs.
+I've been revisiting *The Lean Startup* by Eric Ries, and while its Build → Measure → Learn loop remains timeless, generative AI introduces a new observable and improvable element to that loop: the LLM's behavior. If your product relies on a language model, validated learning must include not only customers but also the model's outputs.
 
 ![Build Measure Learn cycle with AI](/images/infographic_lean_ai.png)
 
@@ -22,7 +22,7 @@ Lean Startup asks teams to:
 3. Measure customer responses and behavior.  
 4. Learn from that data, then decide whether to persevere or pivot.
 
-Its brilliance lies in *validated learning* — making product decisions based on evidence, not assumptions.
+Its brilliance lies in *validated learning*: making product decisions based on evidence, not assumptions.
 
 
 ## The AI Twist
@@ -101,7 +101,7 @@ Interventions:
 3. Use few-shot examples showing detailed, step-by-step instructions with specific times and temperatures.  
 4. Add a post-processing check that flags suspiciously short cooking times for human review.
 
-After implementing these changes, error rates drop significantly: unavailable ingredients from 25% → 6%, dietary violations from 15% → 2%, and user satisfaction scores improve by 40%. Users now save and cook recipes at 3x the original rate — clear evidence that improving model behavior directly improved the product's value.
+After implementing these changes, error rates drop significantly: unavailable ingredients from 25% → 6%, dietary violations from 15% → 2%, and user satisfaction scores improve by 40%. Users now save and cook recipes at 3x the original rate. This is clear evidence that improving model behavior directly improved the product's value.
 
 
 ## Why Startups Fail
@@ -122,22 +122,22 @@ These lead to brittle products that degrade in production and frustrate customer
 
 Be realistic about the work involved:
 
-- **Labeling scale vs. cost.** You can’t annotate every turn — you must sample and automate.  
+- **Labeling scale vs. cost.** You can't annotate every turn. You must sample and automate.  
 - **Taxonomy design is domain-specific.** Legal, medical, and creative apps need different failure categories.  
-- **Causality is difficult.** Failures can stem from prompts, selection of context, model quirks, or UI shaving — isolating the root cause takes discipline.  
+- **Causality is difficult.** Failures can stem from prompts, selection of context, model quirks, or UI shaving. Isolating the root cause takes discipline.  
 - **Drift & versioning.** Continuous monitoring and regression tests are required after each model/prompt change.  
 - **Latency vs. correctness trade-offs.** Added verification steps increase response time; tune according to user tolerance.  
 - **Privacy & compliance.** Logging conversations requires careful design around anonymization, retention, and access controls.  
-- **Organizational alignment.** Error analysis must be cross-functional — product, ML, engineering, research, and ops — to translate findings into action.
+- **Organizational alignment.** Error analysis must be cross-functional (product, ML, engineering, research, and ops) to translate findings into action.
 
 
 ## Final Thoughts
 
-The Lean Startup mantra — validated learning wins — is more relevant than ever. But in AI products, *what you validate* must expand: listen to customers **and** measure the model’s behavior. Error analysis transforms opaque LLM outputs into actionable signals that feed the learning loop. Teams that instrument both sides and close that loop will build safer, more reliable, and more valuable AI products.
+The Lean Startup mantra of "validated learning wins" is more relevant than ever. But in AI products, *what you validate* must expand: listen to customers **and** measure the model's behavior. Error analysis transforms opaque LLM outputs into actionable signals that feed the learning loop. Teams that instrument both sides and close that loop will build safer, more reliable, and more valuable AI products.
 
 
 ## ChatIntel
 
-Implementing robust error analysis is non-trivial, which is why we built **[ChatIntel](https://chatintel.ai/)**. ChatIntel helps teams capture conversations, run structured error analysis, and integrate model-level signals into product decision-making — making it much easier to apply validated learning to both users and models.
+Implementing robust error analysis is non-trivial, which is why we built **[ChatIntel](https://chatintel.ai/)**. ChatIntel helps teams capture conversations, run structured error analysis, and integrate model-level signals into product decision-making. This makes it much easier to apply validated learning to both users and models.
 
-If you’re building or scaling a conversational AI product, don’t just understand your customers — understand your AI too. Check out [ChatIntel](https://chatintel.ai/).
+If you're building or scaling a conversational AI product, don't just understand your customers. Understand your AI too. Check out [ChatIntel](https://chatintel.ai/).
