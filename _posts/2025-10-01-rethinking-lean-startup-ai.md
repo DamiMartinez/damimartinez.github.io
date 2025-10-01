@@ -8,7 +8,7 @@ categories: [AI, Product, Startup, Error Analysis, Evals]
 
 ## Introduction
 
-I’ve been revisiting *The Lean Startup*, and while its Build → Measure → Learn loop remains timeless, generative AI introduces a new observable — and improvable — element to that loop: the LLM’s behavior. If your product relies on a language model, validated learning must include not only customers but also the model’s outputs.
+I’ve been revisiting *The Lean Startup* by Eric Ries, and while its Build → Measure → Learn loop remains timeless, generative AI introduces a new observable — and improvable — element to that loop: the LLM’s behavior. If your product relies on a language model, validated learning must include not only customers but also the model’s outputs.
 
 ![Build Measure Learn cycle with AI](/images/infographic_lean_ai.png)
 
