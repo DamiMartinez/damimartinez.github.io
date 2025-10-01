@@ -38,7 +38,7 @@ Ignoring the model side creates blind spots: subtle errors (hallucinations, tone
 
 ## Error Analysis
 
-Error analysis is the structured method for turning model outputs into measurable signals. It typically involves:
+Error analysis is the structured method for turning model outputs into measurable signals. This approach was popularized by **[Hamel Husain](https://hamel.dev/) and [Shreya Shankar](https://www.sh-reya.com/)** in their course [AI Evals For Engineers & PMs](https://maven.com/parlance-labs/evals). It typically involves:
 
 - **Sampling** representative interactions (successes, failures, edge cases).  
 - **Defining failure modes** (hallucination, omission, misinterpretation, unsafe reply, tone mismatch, etc.).  
@@ -81,26 +81,27 @@ If the model is part of your product, adopt these concrete practices:
 
 ## Example
 
-Imagine an “instant support draft” feature in a SaaS product.
+Imagine a recipe suggestion app that generates personalized meal ideas based on user preferences and dietary restrictions.
 
-- **Hypothesis**: users prefer an editable draft generated from their query vs reading a static FAQ.  
-- **MVP**: a text box + backend that sends query + account context to an LLM and shows a draft.  
-- **Measure**: track accept/edit/reject rates.
+- **Hypothesis**: users will cook more meals at home if they receive AI-generated recipe suggestions tailored to their pantry ingredients.  
+- **MVP**: a simple chat interface where users enter ingredients they have, and the LLM generates a recipe with instructions.  
+- **Measure**: track whether users save recipes, report cooking them, and return for more suggestions.
 
-Error analysis on sampled interactions shows:
+Error analysis on 200 sampled conversations reveals:
 
-- Hallucinations (invented features): 20% of bad drafts.  
-- Tone mismatch: 10%.  
-- Context omission (ignores account settings): 30%.
+- **Suggesting unavailable ingredients**: 25% of recipes include ingredients the user never mentioned.  
+- **Ignoring dietary restrictions**: 15% of recipes contain allergens or restricted foods the user specified to avoid.  
+- **Vague instructions**: 18% of recipes have unclear cooking steps (e.g., "cook until done" without temperature or time).  
+- **Unrealistic cooking times**: 12% claim a recipe takes "15 minutes" when it actually requires 45+ minutes.
 
 Interventions:
 
-1. Add retrieval augmentation to ground answers (reduce hallucination).  
-2. Use a tone-enforcing prompt template (reduce tone mismatch).  
-3. Attach explicit account snippets to the prompt (reduce omissions).  
-4. Provide a fallback “escalate to human” for risky queries.
+1. Add explicit ingredient validation: cross-check suggested ingredients against user's input list.  
+2. Create a structured prompt that repeats dietary restrictions at the start of every generation.  
+3. Use few-shot examples showing detailed, step-by-step instructions with specific times and temperatures.  
+4. Add a post-processing check that flags suspiciously short cooking times for human review.
 
-After iteration you might see hallucination drop from 20% → 4%, acceptance rise, and escalations fall — clear evidence that improving model behavior produced more validated learning than adding superficial features.
+After implementing these changes, error rates drop significantly: unavailable ingredients from 25% → 6%, dietary violations from 15% → 2%, and user satisfaction scores improve by 40%. Users now save and cook recipes at 3x the original rate — clear evidence that improving model behavior directly improved the product's value.
 
 
 ## Why Startups Fail
