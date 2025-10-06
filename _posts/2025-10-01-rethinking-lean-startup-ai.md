@@ -138,6 +138,6 @@ The Lean Startup mantra of "validated learning wins" is more relevant than ever.
 
 ## ChatIntel
 
-Implementing robust error analysis is non-trivial, which is why we built **[ChatIntel](https://chatintel.ai/)**. ChatIntel helps teams capture conversations, run structured error analysis, and integrate model-level signals into product decision-making. This makes it much easier to apply validated learning to both users and models.
+Implementing robust error analysis is non-trivial, which is why we built **[ChatIntel](https://chatintel.ai/error-analysis-framework)**. ChatIntel helps teams capture conversations, run structured error analysis, and integrate model-level signals into product decision-making. This makes it much easier to apply validated learning to both users and models.
 
 If you're building or scaling a conversational AI product, don't just understand your customers. Understand your AI too. Check out [ChatIntel](https://chatintel.ai/).
