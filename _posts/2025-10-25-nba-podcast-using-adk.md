@@ -356,6 +356,66 @@ For the podcast's cover art, I used Gemini's Nano Banana model to create the "NB
 
 ![NBA Daily Summary Cover](/images/NBA_daily_summary_cover.png)
 
+## Running the Agent Programmatically
+
+The NBA Publisher Agent can be executed programmatically using a Python script. Here's how:
+
+```python
+# run_agent.py
+async def run_nba_agent():
+    # Initialize the session service
+    session_service = InMemorySessionService()
+    
+    # Create a session
+    await session_service.create_session(
+        app_name="nba_publisher_app",
+        user_id="nba_user",
+        session_id=f"session_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+    )
+    
+    # Initialize the runner with the agent and session service
+    runner = Runner(
+        agent=root_agent,
+        app_name="nba_publisher_app",
+        session_service=session_service
+    )
+    
+    # Trigger the agent with a user message
+    user_input = "Create today's NBA daily summary podcast"
+    content = Content(role='user', parts=[Part(text=user_input)])
+    
+    # Run the agent and process events
+    events = runner.run_async(
+        user_id="nba_user",
+        session_id=session_id,
+        new_message=content
+    )
+    
+    async for event in events:
+        if event.is_final_response():
+            print(event.content.parts[0].text)
+```
+
+To execute the agent:
+
+```bash
+# Set up environment variables
+export GOOGLE_API_KEY="your-google-ai-api-key"
+export GOOGLE_CLOUD_PROJECT="your-project-id"
+# Service account JSON key for uploading audio to Google Cloud Storage bucket
+export GOOGLE_APPLICATION_CREDENTIALS="path/to/service-account-key.json"
+
+# Run the agent
+python run_agent.py
+```
+
+The agent will automatically:
+1. Fetch current date and NBA game data
+2. Search for game highlights
+3. Generate a podcast script
+4. Create audio using Gemini TTS
+5. Upload to Google Cloud Storage
+
 ## Open Source and Ready to Use
 
 The entire project is open source, so you can build your own version or adapt it for other purposes.
