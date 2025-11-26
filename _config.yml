@@ -9,7 +9,7 @@ name: damian_site
 author: Damian Martinez Carmona
 
 # Short bio or description (displayed in the header)
-description: Personal repository of code, tech stuff, and AI experiments.
+description: Personal repository of tech stuff and AI.
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: 
@@ -44,7 +44,7 @@ enforce_ssl: https://damimartinez.github.io
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: "/"
+baseurl: ""
 
 #
 # !! You don't need to change any of the configuration flags below !!
@@ -67,6 +67,7 @@ kramdown:
 
 # Set the Sass partials directory, as we're using @imports
 sass:
+  sass_dir: _sass
   style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
