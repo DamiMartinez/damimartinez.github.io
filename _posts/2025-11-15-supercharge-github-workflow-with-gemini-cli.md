@@ -48,7 +48,7 @@ The setup script is available in the [google-github-actions/run-gemini-cli](http
 2. Create a file called `setup_workload_identity.sh`
 3. Copy the complete script from [setup_workload_identity.sh](https://github.com/google-github-actions/run-gemini-cli/blob/main/scripts/setup_workload_identity.sh)
 
-![GCP Console with Cloud Shell open](images/gcp_cloud_shell.png)
+![GCP Console with Cloud Shell open](/images/gcp_cloud_shell.png)
 
 ### Important Fix: Service Account Propagation Issue
 
@@ -93,7 +93,7 @@ The script will:
 
 This script is smart enough to check for the `gh` CLI and, if it's installed, it will automatically set the required repository variables for you (`GCP_WIF_PROVIDER`, `GOOGLE_CLOUD_PROJECT`, `GOOGLE_CLOUD_LOCATION`, and `SERVICE_ACCOUNT_EMAIL`).
 
-![Setup script completion with success message](images/setup_script_complete.png)
+![Setup script completion with success message](/images/setup_script_complete.png)
 
 ## Step 3: Add GEMINI_API_KEY Secret
 
@@ -109,7 +109,7 @@ For the GitHub Actions workflows to work properly, you need to add a GitHub repo
    *   Value: Your Gemini API key
    *   Click "Add secret"
 
-![GitHub repository secrets page with GEMINI_API_KEY](images/github_secret.png)
+![GitHub repository secrets page with GEMINI_API_KEY](/images/github_secret.png)
 
 Alternatively, if you have the `gh` CLI installed and authenticated, you can add it from the command line:
 
@@ -165,7 +165,7 @@ gemini extensions install https://github.com/gemini-cli-extensions/jules --auto-
 2. Inside the interface, grant Jules permissions to access your repository
 3. This step is crucial for Jules to be able to interact with your GitHub repos
 
-![Jules web interface for authorization](images/jules_authorization.png)
+![Jules web interface for authorization](/images/jules_authorization.png)
 
 ## Step 7: Clone Your Repository Locally
 
@@ -187,7 +187,7 @@ gemini
 
 2. Type `/jules` to start Jules and complete the login step on screen. Once logged in, you're ready to use Jules!
 
-![Gemini CLI with Jules started](images/jules_cli_started.png)
+![Gemini CLI with Jules started](/images/jules_cli_started.png)
 
 ## Step 9: Create and Fix an Issue
 
@@ -195,7 +195,7 @@ Let's demonstrate the power of this setup by having Jules fix an issue:
 
 1. Create an issue in your repository. For example, I created an issue claiming that the README is outdated and needs review to include the latest changes.
 
-![GitHub issue created](images/github_issue.png)
+![GitHub issue created](/images/github_issue.png)
 
 2. In the Gemini CLI with Jules, ask it to pick up the issue:
 ```
@@ -206,9 +206,9 @@ Let's demonstrate the power of this setup by having Jules fix an issue:
    *   Follow the link it provides to track progress in the Jules web interface
    *   Use `/jules status` in the CLI to check the status of the task
 
-![Jules CLI output showing task started](images/jules_task_started.png)
+![Jules CLI output showing task started](/images/jules_task_started.png)
 
-![Jules web interface showing task progress](images/jules_web_interface.png)
+![Jules web interface showing task progress](/images/jules_web_interface.png)
 
 4. When the task is finished, Jules will ask what you want to do next. You can:
    *   Ask it to create a PR
@@ -218,9 +218,9 @@ Let's demonstrate the power of this setup by having Jules fix an issue:
 
 5. Once the PR is created, it will trigger any GitHub Actions workflows you have configured (including security analysis)
 
-![PR created by Jules](images/pr_created.png)
+![PR created by Jules](/images/pr_created.png)
 
-![GitHub Actions workflows running](images/github_actions_running.png)
+![GitHub Actions workflows running](/images/github_actions_running.png)
 
 6. Finally, when the PR is ready to merge, you can:
    *   Merge it manually and close the issue
@@ -237,7 +237,7 @@ The [google-github-actions/run-gemini-cli](https://github.com/google-github-acti
 
 3. **Jules Agent PR Generator** - Automates PR generation from issues. See the workflow at [jules-agent.yml](https://github.com/DamiMartinez/gemini-workflows-demo/blob/main/.github/workflows/jules-agent.yml)
 
-![GitHub Actions workflows in repository](images/workflows_list.png)
+![GitHub Actions workflows in repository](/images/workflows_list.png)
 
 You can find more workflows and detailed documentation about what they do and how to use them in the [google-github-actions/run-gemini-cli](https://github.com/google-github-actions/run-gemini-cli) repository.
 
