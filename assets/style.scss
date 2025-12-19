@@ -178,7 +178,7 @@ span[data-pullquote]:before {
 a {
   color: $blue;
   text-decoration: none;
-  cursor: pointer;
+  cursor: pointer !important;
 
   &:hover,
   &:active {
