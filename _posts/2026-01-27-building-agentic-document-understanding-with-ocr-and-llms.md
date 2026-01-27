@@ -906,7 +906,7 @@ Building agentic document understanding systems requires combining multiple tech
 
 By combining these tools, we create systems that process documents the way humans do: understanding structure, context, and relationships; rather than just extracting raw text.
 
-The complete notebook is available in the [repository](https://github.com/damimartinez/damimartinez.github.io/blob/master/assets/ocr_demo_pdf.ipynb), and you can adapt it for your specific document processing needs. Whether you're building a research paper chatbot, an invoice processing system, or a document Q&A application, this pipeline provides a solid foundation.
+The complete notebook is available in the [repository](https://github.com/DamiMartinez/demos/blob/main/ocr_demo/ocr_demo_pdf.ipynb), and you can adapt it for your specific document processing needs. Whether you're building a research paper chatbot, an invoice processing system, or a document Q&A application, this pipeline provides a solid foundation.
 
 ---
 
