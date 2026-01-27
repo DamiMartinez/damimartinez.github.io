@@ -4,7 +4,7 @@ title: "Building Agentic Document Understanding with OCR and LLMs"
 categories: [AI, Document Processing, OCR, Gemini, Google ADK, Agent Development]
 ---
 
-Much of the world's data is locked in PDFs, JPEGs, and other documents. Traditional OCR extracts text but loses critical information—the layout of tables with merged cells, the relationship between charts and captions, the reading order of multi-column layouts. 
+Much of the world's data is locked in PDFs, JPEGs, and other documents. Traditional OCR extracts text but loses critical information: the layout of tables with merged cells, the relationship between charts and captions, the reading order of multi-column layouts, etc. 
 
 Inspired by the [Document AI: From OCR to Agentic Doc Extraction](https://learn.deeplearning.ai/courses/document-ai-from-ocr-to-agentic-doc-extraction/information) course from DeepLearning.AI, I built a comprehensive system that processes documents the way humans do: breaking them into parts, examining each piece carefully, and extracting information through multiple iterations using AI agents.
 
