@@ -192,7 +192,7 @@ for source_id, card_json in all_cards_for_chunking:
 
 ## 4. ChromaDB: let it handle embeddings
 
-This is where ChromaDB shines. You **don't** call an embedding API yourself and pass vectors. You give the collection an [embedding function](https://docs.trychroma.com/docs/embeddings/embedding-functions) (here, Chroma's built-in [Google Generative AI](https://docs.trychroma.com/integrations/embedding-models/google-gemini) one). Chroma uses it to embed documents when you `add` and to embed the query when you `query`. For more on collections and embedding functions, see Chroma's [Manage Collections](https://docs.trychroma.com/docs/collections/manage-collections) docs.
+This is where ChromaDB shines. You **don't** call an embedding API yourself and pass vectors. You give the collection an [embedding function](https://docs.trychroma.com/docs/embeddings/embedding-functions) (here, Chroma's built-in [Google Generative AI](https://docs.trychroma.com/integrations/embedding-models/google-gemini) one). Chroma uses it to embed documents when you `add` and to embed the query when you `query`. For more on collections and embedding functions, see Chroma's [Manage Collections](https://docs.trychroma.com/docs/collections/manage-collections) docs. Use `chromadb.PersistentClient(path="...")` instead of `Client()` if you want your data saved on disk and available across multiple runs.
 
 ```python
 !pip install chromadb
@@ -208,6 +208,7 @@ google_ef = embedding_functions.GoogleGenerativeAiEmbeddingFunction(
 )
 
 chroma_client = chromadb.Client()
+# Or use chromadb.PersistentClient(path="/path/to/db") to save data on disk across runs
 collection = chroma_client.get_or_create_collection(
     name=COLLECTION_NAME,
     embedding_function=google_ef,
