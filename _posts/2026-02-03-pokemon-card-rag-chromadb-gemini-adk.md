@@ -4,6 +4,8 @@ title: "Trying ChromaDB: Pokémon Card RAG with Gemini and Google ADK"
 categories: [AI, RAG, ChromaDB, Gemini, Google ADK, Document Understanding]
 ---
 
+![Trying ChromaDB: Pokémon Card RAG with Gemini and Google ADK](/images/pokemon_chroma.png)
+
 I wanted to try **ChromaDB** and see how easy it is to use and how easily you can plug it into an agent or any other flow to build a RAG. 
 
 [Chroma](https://www.trychroma.com/) is an AI-native open-source vector database: everything you need to get started is built in, and it runs on your machine.
