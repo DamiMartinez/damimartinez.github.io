@@ -352,6 +352,8 @@ In this demo we used:
 
 The full notebook is in this [repository](https://github.com/DamiMartinez/demos/blob/main/chromadb_demo/chroma_pokemon_demo.ipynb). It's set up for **Google Colab** (e.g. `GOOGLE_API_KEY` from Colab secrets). You can adapt it for other embedding providers or other "document" sources. For more on ChromaDB: [Manage Collections](https://docs.trychroma.com/docs/collections/manage-collections), [Embedding Functions](https://docs.trychroma.com/docs/embeddings/embedding-functions), and [Google Gemini embedding](https://docs.trychroma.com/integrations/embedding-models/google-gemini).
 
+If you prefer video, I also walk through this same example in a **Spanish-language YouTube video**: [watch the video](https://youtu.be/5flI5Ytn6do).
+
 ---
 
 **Like this content?** Subscribe to my [newsletter](https://damianmartinezcarmona.substack.com/) for more tips and tutorials on AI, Data Engineering, and automation.
