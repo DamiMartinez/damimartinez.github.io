@@ -6,11 +6,9 @@ categories: [AI, Gemini CLI, Agent Skills, Productivity]
 
 I’ve been spending a lot of time lately with the **Gemini CLI**, and while I previously wrote about supercharging GitHub workflows with it, there is a new feature that fundamentally changes how we manage AI context: **Agent Skills**. 
 
-If you’ve ever felt like your `gemini.md` or `agents.md` files were getting too "bloated"—wasting tokens and confusing the model with too much information at once—this post is for you.
+If you’ve ever felt like your `gemini.md` or `agents.md` files were getting too "bloated", wasting tokens and confusing the model with too much information at once, this post is for you.
 
----
-
-### **What are Agent Skills? (And how are they different from `gemini.md` / `agents.md`?)**
+## What are Agent Skills? (And how are they different from `gemini.md` / `agents.md`?)
 
 **Agent Skills** are an open standard (initially brought to life by Anthropic and now adopted by the Gemini CLI) designed to solve the **"context bloat"** problem.
 
@@ -27,7 +25,7 @@ In the past, we used `gemini.md` or `agents.md` to feed the agent everything it 
 
 This “progressive disclosure” model means you can maintain a huge library of expertise (security reviews, migration playbooks, data‑scraping workflows, etc.) without permanently occupying the context window.
 
-#### **Documentation & Structure**
+### Documentation & Structure
 
 A Skill is essentially a folder located in one of the **discovery tiers** that Gemini CLI scans on startup:
 
@@ -60,9 +58,7 @@ You can also include:
 
 Compared to a big `gemini.md`, this lets you keep **each workflow self‑contained** and reusable across tools that support the Agent Skills standard.
 
----
-
-### **How to enable and activate Skills (and which Gemini CLI version you need)**
+## How to enable and activate Skills (and which Gemini CLI version you need)
 
 Skills shipped first as an experimental feature and are now part of the **stable** Gemini CLI.
 
@@ -74,7 +70,7 @@ From the [Gemini CLI changelog](https://geminicli.com/docs/changelogs/):
 
 **My recommendation:** use **Gemini CLI `v0.26.0` or later** (current stable as of writing is `v0.28.0`), where Agent Skills and `skill-creator` are fully wired in.
 
-#### **1. Check / install / upgrade your Gemini CLI**
+### 1. Check / install / upgrade your Gemini CLI
 
 ```bash
 # Install (or upgrade) Gemini CLI globally
@@ -86,7 +82,7 @@ gemini --version
 
 If you’re on an older version and don’t see `/skills` in the CLI, upgrade with `npm install -g @google/gemini-cli@latest`.
 
-#### **2. Enable Agent Skills in settings (if needed)**
+### 2. Enable Agent Skills in settings (if needed)
 
 On recent stable versions, **Agent Skills are enabled by default**, but if you’re on an earlier preview build you may need to toggle them on:
 
@@ -95,7 +91,7 @@ On recent stable versions, **Agent Skills are enabled by default**, but if you�
 3. Search for **Skills** or **Agent Skills**.
 4. Make sure **Enable Agent Skills** is set to `true`.
 
-#### **3. How activation works at runtime**
+### 3. How activation works at runtime
 
 You don’t manually “import” a skill on every prompt. The flow is:
 
@@ -109,13 +105,11 @@ You don’t manually “import” a skill on every prompt. The flow is:
 
 From that point on, you get the feeling of a **specialist agent** sitting next to you, but without having to load all of that context into every prompt manually.
 
----
-
-### **Managing Skills: `/skills` and `gemini skills`**
+## Managing Skills: `/skills` and `gemini skills`
 
 You can manage skills both **inside** an interactive session and from your **terminal**.
 
-#### **In an interactive Gemini session**
+### In an interactive Gemini session
 
 The [`/skills` command](https://geminicli.com/docs/cli/skills/#managing-skills) is the main entry point:
 
@@ -127,7 +121,7 @@ The [`/skills` command](https://geminicli.com/docs/cli/skills/#managing-skills) 
 
 You can also pass `--scope workspace` to make changes local to the repo instead of global user settings.
 
-#### **From the terminal**
+### From the terminal
 
 The same functionality is exposed as a top‑level `gemini skills` command:
 
@@ -160,9 +154,7 @@ gemini skills disable my-expertise --scope workspace
 
 This dual interface is nice: **inside the session** you can quickly inspect and reload skills; **from the shell** you can wire skills into dotfiles, repos, and CI.
 
----
-
-### **Extension‑provided skills and installing the Google Workspace extension**
+## Extension‑provided skills and installing the Google Workspace extension
 
 Not all skills live in your `.gemini/skills` folders. Some are shipped as part of **Gemini CLI extensions**.
 
@@ -177,7 +169,7 @@ You install extensions with:
 gemini extensions install <github-url>
 ```
 
-#### **Installing the Google Workspace extension**
+### Installing the Google Workspace extension
 
 The demo later in this post uses the **Google Workspace** extension to generate a technical spec as a Google Doc.
 
@@ -190,9 +182,7 @@ gemini extensions install https://github.com/gemini-cli-extensions/workspace
 Once installed, Gemini CLI gains access to your Google Drive, Docs, Sheets, and other Workspace apps. That lets the `scraping-website-skill` create a shareable Google Doc with the full API documentation and scraper example, which you can edit or share with your team.
 
 
----
-
-### **Vercel’s skills.sh registry and `npx skills`**
+## Vercel's skills.sh registry and `npx skills`
 
 The last piece of the ecosystem is **skills.sh**, Vercel’s **open Agent Skills directory** at [skills.sh](https://skills.sh/).
 
@@ -218,7 +208,7 @@ This:
 - installs them into the appropriate Agent Skills location for your tooling,
 - and makes them available to AI agents that understand the standard.
 
-#### **My recommended first skill: `find-skills`**
+### My recommended first skill: `find-skills`
 
 If you only install one thing from skills.sh, make it the [`find-skills` skill](https://skills.sh/vercel-labs/skills/find-skills) from `vercel-labs/skills`.  
 This skill’s entire job is to **help you discover and install other skills from the open ecosystem**.
@@ -244,9 +234,7 @@ Because skills.sh follows the **same open Agent Skills spec**, a skill you insta
 
 **Security note:** Vercel performs routine audits on skills in the registry, but—just like Gemini extensions—these are community artifacts. Always inspect the code and instructions, especially if a skill can run shell commands or access private data.
 
----
-
-### **Demo: creating a `scraping-website-skill` with the built‑in `skill-creator`**
+## Demo: creating a `scraping-website-skill` with the built‑in `skill-creator`
 
 Let’s put everything together and build a real skill with Gemini’s built‑in **`skill-creator`** skill.
 
@@ -259,7 +247,7 @@ The goal: a **`scraping-website-skill`** that:
   - a **Google Doc** with the full technical spec and an end‑to‑end example,
   - a **Markdown file** with the same content, ready to be used as context for implementing the scraper later.
 
-#### **1. Prompting `skill-creator`**
+### 1. Prompting `skill-creator`
 
 On Gemini CLI `v0.26.0+`, start a session and describe the skill you want:
 
@@ -290,7 +278,7 @@ Install with `gemini skills install scraping-website-skill.skill --scope workspa
 
 ![Skills list showing scraping-website-skill and chrome-devtools](/images/agent_skills_list.png)
 
-#### **2. What skill-creator actually generates**
+### 2. What skill-creator actually generates
 
 Here's the `SKILL.md` and reference files the skill-creator produced when I ran the demo:
 
@@ -370,9 +358,7 @@ Gemini recognizes the request, prompts you to activate `scraping-website-skill`,
 
 ![Discovery summary and artifacts created](/images/agent_skills_discovery_summary.png)
 
----
-
-### **Why this matters**
+## Why this matters
 
 Agent Skills are quickly becoming the **standard building block** of serious AI workflows:
 
