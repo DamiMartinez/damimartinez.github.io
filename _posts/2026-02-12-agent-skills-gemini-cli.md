@@ -179,7 +179,7 @@ Install it with:
 gemini extensions install https://github.com/gemini-cli-extensions/workspace
 ```
 
-Once installed, Gemini CLI gains access to your Google Drive, Docs, Sheets, and other Workspace apps. That lets the `scraping-website-skill` create a shareable Google Doc with the full API documentation and scraper example, which you can edit or share with your team.
+Once installed, Gemini CLI gains access to your Google Drive, Docs, Sheets, and other Workspace apps.
 
 
 ## Vercel's skills.sh registry and `npx skills`
@@ -241,7 +241,7 @@ Let’s put everything together and build a real skill with Gemini’s built‑i
 The goal: a **`scraping-website-skill`** that:
 
 - orchestrates the **Chrome DevTools MCP** to explore a website,
-- discovers and documents hidden JSON APIs (as in my NBA games post: “How to Discover Hidden APIs for Web Scraping using Chrome DevTools MCP”),
+- discovers and documents hidden JSON APIs (as in my post: [How to Discover Hidden APIs for Web Scraping using Chrome DevTools MCP](https://damimartinez.github.io/scraping-hidden-apis-chrome-mcp/)),
 - collects all functional + non‑functional requirements for a scraper,
 - then generates **two artifacts**:
   - a **Google Doc** with the full technical spec and an end‑to‑end example,
