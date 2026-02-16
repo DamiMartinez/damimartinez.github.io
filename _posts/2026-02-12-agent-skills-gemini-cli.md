@@ -369,7 +369,7 @@ Agent Skills are quickly becoming the **standard building block** of serious AI 
 
 If you build one skill this week, make it something you do over and over—like “create a scraper spec from a website”. Once it’s in a `SKILL.md`, you’ll never have to re‑explain that process to your AI again.
 
----
+I've also created a [video in Spanish](https://youtu.be/LEau1dBjR20) explaining the same concepts covered in this post.
 
 **Like this content?** Subscribe to my [newsletter](https://damianmartinezcarmona.substack.com/) to receive more tips and tutorials about AI, Data Engineering, and automation.
 
