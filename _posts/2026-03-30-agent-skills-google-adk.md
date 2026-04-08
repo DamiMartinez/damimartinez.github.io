@@ -284,3 +284,7 @@ This is the same principle I described in the Gemini CLI post — progressive di
 If you are building agents with ADK, I would encourage you to think about what knowledge in your system could be moved into skills. API documentation, domain-specific workflows, site-specific extraction logic — anything that is rich, specialized, and only relevant to a subset of requests is a candidate.
 
 **Like this content?** Subscribe to my [newsletter](https://damianmartinezcarmona.substack.com/) to receive more tips and tutorials about AI, Data Engineering, and automation.
+
+---
+
+I've also created a [video in Spanish](https://youtu.be/mG45hp4NGgY) explaining the same concepts covered in this post.
