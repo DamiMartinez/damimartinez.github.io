@@ -754,10 +754,9 @@ a.sticker {
   }
 }
 
-// Social icons in dark footer → invert to white
 .site-footer .svg-icon {
-  filter: brightness(0) invert(1);
-  opacity: 0.7;
+  opacity: 0.85;
+  transition: opacity 150ms;
 
   &:hover {
     opacity: 1;
