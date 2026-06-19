@@ -368,6 +368,7 @@ a.sticker {
 }
 
 .post-card {
+  position: relative;
   background: var(--color-card);
   border: 2px solid var(--color-ink);
   border-radius: 14px;
@@ -407,6 +408,13 @@ a.sticker {
   a {
     color: var(--color-ink);
     text-decoration: none;
+
+    // Stretched link — expands click target to entire card
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
 
     &:hover {
       text-decoration: underline;
