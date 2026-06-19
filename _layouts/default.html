@@ -42,7 +42,26 @@
     <footer class="site-footer">
       <div class="container">
         <p class="site-footer__tagline">{{ site.description }}</p>
-        {% include svg-icons.html %}
+        <div class="site-footer__social">
+          {% if site.footer-links.email %}
+            <a href="mailto:{{ site.footer-links.email }}" class="sticker sticker--dark tactile">Email</a>
+          {% endif %}
+          {% if site.footer-links.github %}
+            <a href="https://github.com/{{ site.footer-links.github }}" target="_blank" class="sticker sticker--dark tactile">GitHub</a>
+          {% endif %}
+          {% if site.footer-links.linkedin %}
+            <a href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}" target="_blank" class="sticker sticker--dark tactile">LinkedIn</a>
+          {% endif %}
+          {% if site.footer-links.youtube %}
+            <a href="https://youtube.com/{{ site.footer-links.youtube }}" target="_blank" class="sticker sticker--dark tactile">YouTube</a>
+          {% endif %}
+          {% if site.footer-links.substack %}
+            <a href="{{ site.footer-links.substack }}" target="_blank" class="sticker sticker--dark tactile">Substack</a>
+          {% endif %}
+          {% if site.footer-links.rss %}
+            <a href="{{ site.baseurl }}/feed.xml" target="_blank" class="sticker sticker--dark tactile">RSS</a>
+          {% endif %}
+        </div>
         <p class="site-footer__copy">&copy; {{ site.time | date: "%Y" }} {{ site.author }}</p>
       </div>
     </footer>

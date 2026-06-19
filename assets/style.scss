@@ -196,6 +196,27 @@ a.sticker {
   }
 }
 
+.sticker--dark {
+  background: transparent;
+  border-color: var(--color-footer-fg);
+  color: var(--color-footer-fg);
+  box-shadow: 3px 3px 0 var(--color-footer-fg);
+  opacity: 0.8;
+  transition: transform 80ms, box-shadow 80ms, opacity 150ms;
+
+  &:hover {
+    opacity: 1;
+    text-decoration: none;
+    color: var(--color-footer-fg);
+  }
+
+  &:active {
+    transform: translate(3px, 3px);
+    box-shadow: none;
+    opacity: 1;
+  }
+}
+
 .tactile {
   transition: transform 80ms, box-shadow 80ms;
 
@@ -754,13 +775,11 @@ a.sticker {
   }
 }
 
-.site-footer .svg-icon {
-  opacity: 0.85;
-  transition: opacity 150ms;
-
-  &:hover {
-    opacity: 1;
-  }
+.site-footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 1.25rem 0;
 }
 
 // Pullquote
