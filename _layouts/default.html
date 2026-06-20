@@ -22,7 +22,10 @@
     <header class="site-header">
       <div class="container">
         <div class="site-header__inner">
-          <a href="{{ site.baseurl }}/" class="site-logo">{{ site.name }}</a>
+          <a href="{{ site.baseurl }}/" class="site-logo">
+            <img src="{{ site.baseurl }}/images/damian_website.png" alt="" class="site-logo__avatar" aria-hidden="true" />
+            {{ site.name }}
+          </a>
           <nav class="site-nav">
             <a href="{{ site.baseurl }}/">Home</a>
             <a href="{{ site.baseurl }}/about">About</a>
