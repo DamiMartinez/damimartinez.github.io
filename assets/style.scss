@@ -214,6 +214,24 @@ a.sticker {
   border-color: var(--color-ink);
 }
 
+.sticker--cobalt {
+  background: oklch(48% .18 250);
+  color: var(--color-footer-fg);
+  border-color: var(--color-ink);
+}
+
+.sticker--pine {
+  background: oklch(44% .13 155);
+  color: var(--color-footer-fg);
+  border-color: var(--color-ink);
+}
+
+.sticker--amber {
+  background: oklch(72% .16 75);
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
 .sticker--dark {
   background: transparent;
   border-color: var(--color-footer-fg);
