@@ -120,7 +120,7 @@ img {
   max-width: 100%;
 }
 
-p > img {
+p > img:not(.about-portrait) {
   display: block;
   margin: 0 auto;
 }
@@ -544,7 +544,7 @@ a.sticker {
   border: 2px solid var(--color-ink);
   box-shadow: var(--shadow-hard-lg);
   transform: rotate(2deg);
-  margin: 0 0 24px 48px;
+  margin: 0 1.5em 1.5em 1.5em;
 
   @include mobile {
     float: none;
