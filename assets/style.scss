@@ -698,8 +698,22 @@ a.sticker {
     p:last-child  { margin-bottom: 0; }
   }
 
-  pre,
-  .highlight {
+  div.highlight {
+    border: 2px solid var(--color-ink);
+    border-radius: 0;
+    box-shadow: var(--shadow-hard-sm);
+    overflow-x: auto;
+    margin: 1.5em 0;
+
+    pre.highlight {
+      border: none;
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  pre:not(.highlight) {
     border: 2px solid var(--color-ink);
     border-radius: 0;
     box-shadow: var(--shadow-hard-sm);
@@ -967,10 +981,17 @@ span[data-pullquote]:before {
 @import "highlights";
 @import "svg-icons";
 
-// Override: neo-brutalist block code style
-.highlight {
+// Override: neo-brutalist block code style — only outer div, not pre
+div.highlight {
   border: 2px solid var(--color-ink) !important;
   border-radius: 0 !important;
   box-shadow: var(--shadow-hard-sm);
   overflow-x: auto;
+}
+
+pre.highlight {
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
