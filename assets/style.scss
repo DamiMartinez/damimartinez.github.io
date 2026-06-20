@@ -685,7 +685,7 @@ a.sticker {
     }
   }
 
-  img {
+  img:not(.about-portrait) {
     max-width: 100%;
     border: 2px solid var(--color-ink);
     border-radius: 4px;
