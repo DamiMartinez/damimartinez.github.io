@@ -285,7 +285,10 @@ a.sticker {
 
     &:hover {
       opacity: 1;
-      text-decoration: none;
+      text-decoration: underline;
+      text-decoration-color: var(--color-tomato);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
     }
 
     @include mobile {
