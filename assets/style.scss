@@ -196,6 +196,24 @@ a.sticker {
   }
 }
 
+.sticker--tomato {
+  background: var(--color-tomato);
+  color: var(--color-footer-fg);
+  border-color: var(--color-ink);
+}
+
+.sticker--grape {
+  background: var(--color-grape);
+  color: var(--color-footer-fg);
+  border-color: var(--color-ink);
+}
+
+.sticker--marigold {
+  background: var(--color-marigold);
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
 .sticker--dark {
   background: transparent;
   border-color: var(--color-footer-fg);
