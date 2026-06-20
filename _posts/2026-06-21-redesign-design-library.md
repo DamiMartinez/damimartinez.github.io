@@ -12,7 +12,7 @@ A few months ago I was talking with my friend **[Dimitar Inchev](https://www.lin
 
 His reasoning was simple. Screenshots are useful but passive. A structured document is something you can *use* — give it to an AI agent and ask it to replicate or adapt the style. The collection grows over time and becomes a personal library of designs you've curated yourself, from sites you actually like.
 
-I thought this was a smart idea, so I built a template based on what he described and started doing the same.
+I thought this was a smart idea, so I built a template based on what he described and put it to work straight away.
 
 ## The template
 
@@ -141,7 +141,9 @@ That last section might be the most underrated. When you've captured what makes 
 
 ## Building the library
 
-I started going through websites I'd bookmarked over the years and documenting them one by one. Not all of them — only the ones where I thought "I'd actually want to build something that looks like this."
+The workflow for adding a new entry is simple: find a website whose design you like, give the template to your AI coding agent, and prompt it to inspect the site and fill in every section. The agent reads the live page, extracts the colors, fonts, spacing, component patterns, and interaction details, and returns a completed spec file. No manual digging through DevTools required.
+
+I started going through websites I'd bookmarked over the years and running them through this process. Not all of them — only the ones where I thought "I'd actually want to build something that looks like this."
 
 Each entry taught me something different about how design decisions compound. Hard shadows are meaningless without chunky borders to match. A distinctive background color works because of its warmth, not just its value. A swappable accent system is clever but only worth the complexity if the personality of the site supports it.
 
