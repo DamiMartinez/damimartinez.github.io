@@ -1,24 +1,33 @@
 //
-// VARIABLES
+// DESIGN TOKENS
 //
 
-// Colors
-$blue: #008B8B; // Teal accent
+:root {
+  // Colors — OKLCH purple-neutral system + magenta accent
+  --color-paper:      oklch(97.5% .006 300);
+  --color-paper-2:    oklch(95% .012 298);
+  --color-card:       oklch(99.6% .004 300);
+  --color-ink:        oklch(23% .03 295);
+  --color-ink-soft:   oklch(45% .026 295);
+  --color-ink-faint:  oklch(62% .022 295);
+  --color-tomato:     oklch(54% .2 348);
+  --color-marigold:   oklch(82% .07 348);
+  --color-grape:      oklch(45% .19 350);
+  --color-footer-bg:  oklch(16% .018 295);
+  --color-footer-fg:  oklch(98% .008 300);
 
-// Grays
-$black: #111;
-$darkerGray: #222;
-$darkGray: #2c3e50; // Midnight Blue
-$gray: #7f8c8d;
-$lightGray: #ecf0f1;
-$white: #fff;
+  // Hard flat shadows — zero blur, ink color
+  --shadow-hard-sm:  3px 3px 0 var(--color-ink);
+  --shadow-hard:     5px 5px 0 var(--color-ink);
+  --shadow-hard-lg:  8px 8px 0 var(--color-ink);
 
-// Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
+  // Fonts
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body:    'Atkinson Hyperlegible', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
 
-// Mobile breakpoints
+// Mobile breakpoint mixin (used with @include mobile throughout style.scss)
 @mixin mobile {
   @media screen and (max-width: 640px) {
     @content;

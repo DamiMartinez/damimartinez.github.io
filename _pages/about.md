@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+<img src="/images/damian_website.png" alt="Damian Martinez Carmona" class="about-portrait" />
+
 Hey! I'm **Damian Martinez Carmona**, a tech entrepreneur and engineer with years of experience building online products and data platforms.
 
 I love creating things that solve real problems, especially when it involves wrangling data or automating boring tasks. These days, I’m exploring artificial intelligence, with a particular focus on the intersection of **AI and Data Engineering**, and how AI can enhance data processing and analysis.
@@ -14,6 +16,6 @@ I'm always up for interesting conversations about AI, data, or whatever you're b
 
 *From Spain · Python enthusiast · Tech communicator*
 
-[Subscribe to my newsletter](https://damianmartinezcarmona.substack.com/)
+<a href="https://damianmartinezcarmona.substack.com/" target="_blank" class="btn-primary">Subscribe to my newsletter →</a>
 
 **Contact:** damian.martinez.carmona@gmail.com , [LinkedIn](https://linkedin.com/in/damian-martinez-carmona)
