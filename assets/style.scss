@@ -316,9 +316,22 @@ a.sticker {
 /**********************/
 
 .hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: center;
+  gap: 48px;
   padding: 4rem 0 3rem;
   border-bottom: 2px solid var(--color-ink);
   margin-bottom: 3rem;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.hero__content {
+  min-width: 0;
 }
 
 .hero__title {
@@ -353,6 +366,32 @@ a.sticker {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.hero__photo {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: clamp(180px, 24vw, 280px);
+    height: clamp(180px, 24vw, 280px);
+    object-fit: cover;
+    border-radius: 16px;
+    border: 2px solid var(--color-ink);
+    box-shadow: var(--shadow-hard-lg);
+    transform: rotate(-3deg);
+    display: block;
+  }
+
+  @include mobile {
+    order: -1;
+
+    img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+    }
+  }
 }
 
 /**********************/
@@ -494,6 +533,27 @@ a.sticker {
   background: var(--color-ink);
   color: var(--color-paper);
   box-shadow: none;
+}
+
+.about-portrait {
+  float: right;
+  width: clamp(140px, 20vw, 220px);
+  height: clamp(140px, 20vw, 220px);
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid var(--color-ink);
+  box-shadow: var(--shadow-hard-lg);
+  transform: rotate(2deg);
+  margin: 0 0 24px 32px;
+
+  @include mobile {
+    float: none;
+    display: block;
+    margin: 0 auto 24px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+  }
 }
 
 /**********************/
