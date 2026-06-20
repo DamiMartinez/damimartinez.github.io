@@ -1,19 +1,20 @@
 
 .highlight {
-  background-color: #1e1c3f;
-  padding: 7px 7px 7px 10px;
+  background-color: oklch(16% .018 295);
+  padding: 1.25rem 1.5rem;
   overflow: auto;
-  font-size: 90%;
+  font-size: 0.875em;
+  line-height: 1.6;
 }
 
 code {
-  font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
   color: #d8d8d8;
 }
 
-.highlighter-rouge { 
-  background-color: #FAFAFA; 
-  color: #FF554A; 
+.highlighter-rouge {
+  background-color: var(--color-paper-2);
+  color: var(--color-tomato);
 }
 
 .highlight .c { color: #586E75 } /* Comment */
