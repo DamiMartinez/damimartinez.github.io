@@ -535,6 +535,33 @@ a.sticker {
   box-shadow: none;
 }
 
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-card);
+  background: var(--color-ink);
+  border: 2px solid var(--color-ink);
+  border-radius: 999px;
+  padding: 0.55rem 1.2rem;
+  box-shadow: var(--shadow-hard-sm);
+  text-decoration: none;
+  transition: transform 80ms, box-shadow 80ms;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    color: var(--color-card);
+  }
+
+  &:active {
+    transform: translate(3px, 3px);
+    box-shadow: none;
+  }
+}
+
 .about-portrait {
   float: right;
   width: clamp(140px, 20vw, 220px);

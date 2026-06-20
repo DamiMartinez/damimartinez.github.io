@@ -16,6 +16,6 @@ I'm always up for interesting conversations about AI, data, or whatever you're b
 
 *From Spain · Python enthusiast · Tech communicator*
 
-[Subscribe to my newsletter](https://damianmartinezcarmona.substack.com/)
+<a href="https://damianmartinezcarmona.substack.com/" target="_blank" class="btn-primary">Subscribe to my newsletter →</a>
 
 **Contact:** damian.martinez.carmona@gmail.com , [LinkedIn](https://linkedin.com/in/damian-martinez-carmona)
