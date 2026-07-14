@@ -270,7 +270,8 @@ a.sticker {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--color-marigold);
+  background: var(--color-card);
+  border-top: 5px solid var(--color-tomato);
   border-bottom: 2px solid var(--color-ink);
 }
 
