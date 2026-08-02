@@ -4,15 +4,17 @@ title: "book-skills: Turning Classic Books Into Claude Code Skills"
 categories: [AI, Claude Code, Agent Skills, Open Source]
 ---
 
+I just open-sourced `book-skills`: a Claude Code skill for each of my favorite books, so Claude applies that book's framework automatically the moment a conversation calls for it — no need to say the title out loud.
+
 ![book-skills banner](/images/book_skills_banner.png)
 
 I've been listening to [Lenny's Podcast latest episode with Dianne Penn](https://www.youtube.com/watch?v=tivaWTTVRhY), Head of Product for Research & Labs at Anthropic, and one thing she said stuck with me: she'd built herself a set of Claude Code skills based on the management and product books that shaped how she works, so Claude applies that thinking automatically instead of her having to re-explain it every time.
 
-That reminded me of something Marc Andreessen said once — he only reads books that are at least ten years old, because those are the ones that have actually stood the test of time. Trendy frameworks come and go; a book still worth reading a decade (or five) later has already survived that filter. So instead of building skills around whatever's trending this quarter, I built a repo around the books that already proved themselves:
+That reminded me of Marc Andreessen's line about only reading books that are at least ten years old — the ones that have already proven durable. So I picked books I'd apply that filter to myself, and turned them into skills:
 
 👉 [github.com/DamiMartinez/book-skills](https://github.com/DamiMartinez/book-skills)
 
-It's public, MIT-licensed, and open to anyone who wants to add a skill for a classic in their own field.
+It's public, MIT-licensed, and open to anyone who wants to add a skill for their own field.
 
 ## What this actually is
 
@@ -26,7 +28,7 @@ Claude Code decides whether to use a skill by matching what you're asking agains
 
 ## What's inside
 
-Eight skills so far, spanning product, leadership, and engineering classics:
+Eight skills so far, spanning product, leadership, and engineering:
 
 | Skill | Book | Topic |
 |---|---|---|
@@ -116,8 +118,8 @@ Keep it focused on what's *actionable* from the book, not exhaustive coverage of
 
 ## Why this matters
 
-Dianne Penn built these for herself, privately, to speed up her own PM work. Marc Andreessen's ten-year filter is really the same idea from the reading side: skip whatever's trendy, keep what's already proven durable. Putting the two together is the point of this repo — instead of every engineer, PM, or manager re-deriving the same lessons from *The Lean Startup* or *High Output Management* on their own, the framework just sits there as a skill, ready the moment the conversation needs it.
+Dianne Penn built these for herself, privately, to speed up her own PM work. That's really the whole point of this repo — instead of every engineer, PM, or manager re-deriving the same lessons from *The Lean Startup* or *High Output Management* on their own, the framework just sits there as a skill, ready the moment the conversation needs it.
 
-If you've got a classic in your own field that you keep mentally reapplying at work, I'd genuinely like a PR for it.
+If you've got a book you keep mentally reapplying at work, I'd genuinely like a PR for it.
 
 **Like this content?** Subscribe to my [newsletter](https://damianmartinezcarmona.substack.com/) to receive more tips and tutorials about AI, Data Engineering, and automation.
