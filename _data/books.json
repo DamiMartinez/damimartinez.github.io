@@ -1,9 +1,16 @@
 [
   {
+    "title": "1984",
+    "author": "George Orwell",
+    "cover": "https://covers.openlibrary.org/b/id/9267242-L.jpg",
+    "rating": 4.5,
+    "date_read": "2026-08-13"
+  },
+  {
     "title": "El coronel no tiene quien le escriba",
     "author": "Gabriel García Márquez",
     "cover": "https://covers.openlibrary.org/b/id/10096705-L.jpg",
-    "rating": 4.5,
+    "rating": 4,
     "date_read": "2026-08-05"
   },
   {
