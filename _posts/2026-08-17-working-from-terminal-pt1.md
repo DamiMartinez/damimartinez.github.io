@@ -17,7 +17,7 @@ But now, with Claude Code and the other coding agents, things have changed. I'm 
 Therefore, after making that decision, I started searching for the tools I needed to work from the terminal in the most efficient way for me. I ended up with this setup:
 
 - **tmux**: the session/window/pane manager. This is what lets me split the terminal into panes, keep multiple projects running in separate sessions, and detach/reattach without losing anything.
-- **neovim**: my editor. I'm using a personal fork of kickstart.nvim, which turned out to have a couple of surprises I'll get into below.
+- **neovim**: my editor. I'm using a personal fork of [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim), which turned out to have a couple of surprises I'll get into below.
 - **lazygit**: a terminal UI for git, which I open as a floating popup right inside tmux.
 
 At first glance, this seemed like a pretty simple foundation to start, later we will see "simple" is not the word XD.
