@@ -1,5 +1,13 @@
 [
   {
+    "title": "Resurrection",
+    "year": 2025,
+    "rating": 4.0,
+    "watched_date": "2026-08-22",
+    "poster": "https://a.ltrbxd.com/resized/film-poster/7/9/0/1/8/8/790188-resurrection-2025-0-600-0-900-crop.jpg?v=563b924f1c",
+    "link": "https://letterboxd.com/damiavr/film/resurrection-2025/"
+  },
+  {
     "title": "Obsession",
     "year": 2025,
     "rating": 4.0,
@@ -390,13 +398,5 @@
     "watched_date": "2025-09-10",
     "poster": "https://a.ltrbxd.com/resized/film-poster/5/0/9/5/0/50950-school-of-rock-0-600-0-900-crop.jpg?v=1d462b4ca3",
     "link": "https://letterboxd.com/damiavr/film/school-of-rock/"
-  },
-  {
-    "title": "War Dogs",
-    "year": 2016,
-    "rating": 3.0,
-    "watched_date": "2025-09-07",
-    "poster": "https://a.ltrbxd.com/resized/sm/upload/7b/d2/2z/ef/aqhAqttDq7zgsTaBHtCD8wmTk6k-0-600-0-900-crop.jpg?v=b1d4ca3acb",
-    "link": "https://letterboxd.com/damiavr/film/war-dogs-2016/"
   }
 ]
