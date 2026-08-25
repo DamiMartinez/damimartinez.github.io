@@ -138,3 +138,7 @@ With this done, Terminal, tmux, Neovim, and Claude Code all now share the same G
 - **gruvbox.nvim**: latest via `vim.pack`
 - **tmux-gruvbox**: latest via TPM
 - **Claude Code**: latest, with `/theme` support
+
+---
+
+**Like this content?** Subscribe to my [newsletter](https://damianmartinezcarmona.substack.com/) to receive more tips and tutorials about AI, Data Engineering, and automation.
