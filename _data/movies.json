@@ -1,5 +1,21 @@
 [
   {
+    "title": "Good Luck, Have Fun, Don't Die",
+    "year": 2025,
+    "rating": 2.5,
+    "watched_date": "2026-09-06",
+    "poster": "https://a.ltrbxd.com/resized/film-poster/1/0/0/9/2/3/7/1009237-good-luck-have-fun-dont-die-0-600-0-900-crop.jpg?v=be79007f48",
+    "link": "https://letterboxd.com/damiavr/film/good-luck-have-fun-dont-die/"
+  },
+  {
+    "title": "Match Point",
+    "year": 2005,
+    "rating": 3.0,
+    "watched_date": "2026-09-06",
+    "poster": "https://a.ltrbxd.com/resized/sm/upload/eo/7s/o4/fc/80iHkrFzNxbSxlfMaLaNkGFRK2r-0-600-0-900-crop.jpg?v=ef638e0885",
+    "link": "https://letterboxd.com/damiavr/film/match-point/"
+  },
+  {
     "title": "Kingdom of Heaven",
     "year": 2005,
     "rating": 3.5,
@@ -382,21 +398,5 @@
     "watched_date": "2025-09-20",
     "poster": "https://a.ltrbxd.com/resized/sm/upload/8e/5j/1t/9e/e0uefngyZyVVTm9SVHdEsB6egTi-0-600-0-900-crop.jpg?v=481e5530de",
     "link": "https://letterboxd.com/damiavr/film/detachment/"
-  },
-  {
-    "title": "Days of Being Wild",
-    "year": 1990,
-    "rating": 3.5,
-    "watched_date": "2025-09-20",
-    "poster": "https://a.ltrbxd.com/resized/film-poster/4/0/4/3/4/40434-days-of-being-wild-0-600-0-900-crop.jpg?v=6d9f15154f",
-    "link": "https://letterboxd.com/damiavr/film/ah-fei-jing-juen/"
-  },
-  {
-    "title": "The Handmaiden",
-    "year": 2016,
-    "rating": 5.0,
-    "watched_date": "2025-09-10",
-    "poster": "https://a.ltrbxd.com/resized/sm/upload/pc/n6/pz/mi/wvzfK5QR6dGLwND8MCzWjsQWG4Q-0-600-0-900-crop.jpg?v=bcfcc8f8f6",
-    "link": "https://letterboxd.com/damiavr/film/the-handmaiden/"
   }
 ]
