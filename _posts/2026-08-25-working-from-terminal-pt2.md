@@ -122,7 +122,113 @@ Fix, from inside a Claude Code session:
 
 This opens an interactive picker, select `light`, or `auto` to have it detect the terminal's light/dark background and follow OS-level appearance changes automatically going forward.
 
-One known limitation, not fixable from terminal config: per Claude Code's own documentation, some UI elements, code block backgrounds, diff highlighting, and yes/no prompt selection highlights, currently use hardcoded colors that don't fully respect a custom terminal palette. So a few accents may still look slightly off from true Gruvbox even with `/theme light` set. That's a known constraint on Anthropic's side, not a local configuration issue.
+### Going further: a real Gruvbox Light custom theme, not just light mode
+
+`/theme light` gets Claude Code's own background/foreground close, but it's still a stock light theme, not actually Gruvbox: diff highlighting, permission prompts, autocomplete suggestions, and the message-submit background all keep their default accent colors, which don't match the rest of the stack.
+
+Turns out Claude Code supports fully custom themes, and they *do* let you override those exact elements, it just isn't obvious from the picker alone.
+
+From `/theme`, pick **New custom theme…**, base it on `light`, give it a name. That creates a JSON file at `~/.claude/themes/<name>.json` with an empty `overrides` object:
+
+```json
+{
+  "name": "damian-theme",
+  "base": "light",
+  "overrides": {}
+}
+```
+
+Every key in `overrides` maps a UI element to a hex color, and it accepts far more than the picker exposes: diff colors, permission/suggestion accents, message backgrounds, even the per-subagent color set. Editing the file directly (any text editor, Claude Code picks it up on next `/theme` or restart) let me map every one of those keys onto the actual Gruvbox Light palette from the table above, instead of the defaults.
+
+Two things I got wrong on the first pass, worth calling out since they weren't obvious from the key names alone:
+
+- **Diff word-highlights need a mid-tone, not the full accent color.** `diffAddedWord` / `diffRemovedWord` render as a solid chip with dark text drawn on top, no separate text-color override exists for them. Using Gruvbox's actual green/red accents as the chip color made the text on top nearly unreadable (dark-on-dark). Blending each accent about halfway toward the background fixed it, saturated enough to stand out from the pastel diff-line background, light enough that dark text stays legible.
+- **Warm pastels read as "salmon" against a cream background, even when they aren't red.** I tried the message-background color in tan, then a neutral Gruvbox gray, then a pale amber, and all three looked like an error state at a glance, purely because Gruvbox's cream backdrop pulls any warm blend toward peach. Gruvbox's own blue accent, lightened, was the fix: it's a legitimate part of the 8-color Gruvbox set (not a foreign color), and being cool instead of warm, it can't be mistaken for the red/green already used for diffs and errors.
+
+Final `~/.claude/themes/damian-theme.json`:
+
+```json
+{
+  "name": "damian-theme",
+  "base": "light",
+  "overrides": {
+    "autoAccept": "#8f3f71",
+    "autoAcceptShimmer": "#b16286",
+    "skill": "#8f3f71",
+    "bashBorder": "#b16286",
+    "claude": "#d65d0e",
+    "claudeShimmer": "#fe8019",
+    "claudeBlue_FOR_SYSTEM_SPINNER": "#076678",
+    "claudeBlueShimmer_FOR_SYSTEM_SPINNER": "#458588",
+    "permission": "#076678",
+    "permissionShimmer": "#458588",
+    "planMode": "#427b58",
+    "ide": "#458588",
+    "promptBorder": "#7c6f64",
+    "promptBorderShimmer": "#928374",
+    "text": "#3c3836",
+    "inverseText": "#f9f5d7",
+    "inactive": "#7c6f64",
+    "inactiveShimmer": "#928374",
+    "subtle": "#bdae93",
+    "suggestion": "#076678",
+    "remember": "#8f3f71",
+    "background": "#f9f5d7",
+    "success": "#79740e",
+    "error": "#9d0006",
+    "warning": "#b57614",
+    "merged": "#8f3f71",
+    "warningShimmer": "#d79921",
+    "diffAdded": "#d8e4b0",
+    "diffRemoved": "#f2d6cd",
+    "diffAddedDimmed": "#eef0da",
+    "diffRemovedDimmed": "#f8e8e2",
+    "diffAddedWord": "#d3d17a",
+    "diffRemovedWord": "#eab3a8",
+    "red_FOR_SUBAGENTS_ONLY": "#cc241d",
+    "blue_FOR_SUBAGENTS_ONLY": "#458588",
+    "green_FOR_SUBAGENTS_ONLY": "#98971a",
+    "yellow_FOR_SUBAGENTS_ONLY": "#d79921",
+    "purple_FOR_SUBAGENTS_ONLY": "#b16286",
+    "orange_FOR_SUBAGENTS_ONLY": "#d65d0e",
+    "pink_FOR_SUBAGENTS_ONLY": "#b16286",
+    "cyan_FOR_SUBAGENTS_ONLY": "#689d6a",
+    "professionalBlue": "#458588",
+    "chromeYellow": "#d79921",
+    "clawd_body": "#d65d0e",
+    "clawd_background": "#f9f5d7",
+    "userMessageBackground": "#c9dde0",
+    "userMessageBackgroundHover": "#b3cdd1",
+    "composerSidebarBackground": "#f2e5bc",
+    "selectionBg": "#d5c4a1",
+    "bashMessageBackgroundColor": "#ebdbb2",
+    "memoryBackgroundColor": "#d5c4a1",
+    "rate_limit_fill": "#458588",
+    "rate_limit_empty": "#d5c4a1",
+    "fastMode": "#fe8019",
+    "fastModeShimmer": "#d65d0e",
+    "effortUltra": "#8f3f71",
+    "briefLabelYou": "#076678",
+    "briefLabelClaude": "#d65d0e",
+    "rainbow_red": "#cc241d",
+    "rainbow_orange": "#d65d0e",
+    "rainbow_yellow": "#d79921",
+    "rainbow_green": "#98971a",
+    "rainbow_blue": "#458588",
+    "rainbow_indigo": "#076678",
+    "rainbow_violet": "#b16286",
+    "rainbow_red_shimmer": "#fb4934",
+    "rainbow_orange_shimmer": "#fe8019",
+    "rainbow_yellow_shimmer": "#fabd2f",
+    "rainbow_green_shimmer": "#b8bb26",
+    "rainbow_blue_shimmer": "#83a598",
+    "rainbow_indigo_shimmer": "#458588",
+    "rainbow_violet_shimmer": "#d3869b"
+  }
+}
+```
+
+One caveat that's still real: the code-block syntax highlighter (shown as "Syntax theme: GitHub" at the bottom of the picker) is a separate system from these theme overrides and doesn't have a Gruvbox option. Toggle it off with `ctrl+t` if the mismatch bothers you.
 
 ## Wrapping up
 
