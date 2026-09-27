@@ -1,5 +1,13 @@
 [
   {
+    "title": "Backrooms",
+    "year": 2026,
+    "rating": 3.5,
+    "watched_date": "2026-09-26",
+    "poster": "https://a.ltrbxd.com/resized/film-poster/9/7/6/4/1/9/976419-backrooms-2026-0-600-0-900-crop.jpg?v=f7a99e3fc8",
+    "link": "https://letterboxd.com/damiavr/film/backrooms-2026/"
+  },
+  {
     "title": "Good Luck, Have Fun, Don't Die",
     "year": 2025,
     "rating": 2.5,
@@ -390,13 +398,5 @@
     "watched_date": "2025-09-23",
     "poster": "https://a.ltrbxd.com/resized/film-poster/8/3/4/6/5/6/834656-civil-war-0-600-0-900-crop.jpg?v=aefec33dbe",
     "link": "https://letterboxd.com/damiavr/film/civil-war-2024/"
-  },
-  {
-    "title": "Detachment",
-    "year": 2011,
-    "rating": 4.0,
-    "watched_date": "2025-09-20",
-    "poster": "https://a.ltrbxd.com/resized/sm/upload/8e/5j/1t/9e/e0uefngyZyVVTm9SVHdEsB6egTi-0-600-0-900-crop.jpg?v=481e5530de",
-    "link": "https://letterboxd.com/damiavr/film/detachment/"
   }
 ]
