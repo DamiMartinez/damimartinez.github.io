@@ -14,7 +14,9 @@ Pi still gives you the essential agent loop, a terminal UI, sessions, model sele
 
 With an opinionated coding agent, you usually receive a lot at once: built-in instructions, a fixed approval system, integrations you may not use, and product-specific behaviour that is always part of the conversation. That can be convenient, but it also means carrying context and complexity that may not fit the way you work.
 
-Pi lets me begin with the basics and add only the things I want. My global configuration is small: a model choice, a theme, a couple of extensions, and two skills. The result feels faster and easier to reason about because I know what is in the harness and why it is there.
+Pi lets me begin with the basics and add only the things I want. My global configuration is deliberately small right now: a model choice, a theme, a few extensions, and two skills. I have only been using Pi for a month, so this is the beginning of a setup, not its final form.
+
+That small start has taught me something useful: models alone are already very capable. For most tasks I do not need a heavy harness, a long list of extensions, or a capability for every imaginable workflow. A smaller environment feels faster and easier to reason about because I know what is in it and why it is there. I will certainly add more skills and extensions over time, but I want each one to earn its place.
 
 This is not an argument that every agent needs to be configured from scratch. A ready-made harness is a good trade-off when you want to be productive immediately. But if you spend hours a day with an agent, being able to shape the surrounding workflow becomes a real advantage.
 
@@ -25,6 +27,8 @@ There is a cost angle too. Context is not free when you use a metered model. A l
 Another big reason I moved to Pi is that it is not tied to one model vendor. I can use hosted providers, API keys, compatible endpoints, and local models, then switch models without changing the agent interface or the workflow I have built around it.
 
 For example, I use OpenAI Codex through my existing ChatGPT subscription. Pi's `/login` flow lets me authenticate with the subscription and use the available Codex models without separately buying OpenAI API credits for that workflow. I can still use an API-backed model or a local model when that makes more sense.
+
+The obvious comparison is Anthropic's Claude Code subscription, another popular way to access a strong coding model. Pi can authenticate with a Claude account, but I would not treat that as equivalent to using Claude Code itself through its subscription. Pi warns that Anthropic subscription authentication in a third-party harness may use paid extra usage rather than the plan's included limits. In practice, that means I would expect to pay for API-style usage or extra usage and check the billing category carefully, instead of assuming a Claude Code subscription covers Pi in the same way that my ChatGPT/Codex subscription does.
 
 That separation is refreshing: Pi is the agent environment; the model is a choice inside it.
 
@@ -38,7 +42,7 @@ Over the last month, I have been using that idea rather than waiting for a featu
 
 ## My skills: instructions that load when needed
 
-I currently have two global skills.
+I currently have only two global skills. That is intentional for now: I am still learning what I actually repeat often enough to deserve a reusable workflow, rather than installing a huge library just because it exists.
 
 ### Finding skills instead of reinventing them
 
@@ -87,6 +91,12 @@ Again, this is not essential to coding. But the agent is now part of the termina
 The flexibility comes with responsibility. Pi extensions run with the permissions of the local user, so I only load code I trust. A custom safety extension is only as good as the assumptions in its implementation. And when I build my own workflow, I have to maintain it.
 
 For me, that is a good trade. The default is not a giant black box. I can read it, replace it, or leave it out. When something feels missing, I can first ask: is this a skill, an extension, a prompt template, or simply a habit I should keep myself?
+
+## Next: making a fleet of agents manageable
+
+The next thing I want to add is much more ambitious: a set of skills and extensions for managing subagents and multiple Pi sessions. The goal is a workflow where I can interact with a fleet of agents, see what they are doing, and move between their sessions without leaving the terminal interface I already use.
+
+That is still a work in progress, but it is the best preview of why I like Pi. I do not need to wait for a vendor to decide that my preferred way of coordinating agents is worth building. I can start with a small workflow, let it prove itself, and turn the parts that help into reusable Pi capabilities.
 
 After a month, Pi has become the coding agent that best fits the rest of my terminal setup. It is free and open source, works with the models I choose, and gives me a clean base rather than a fixed idea of how an agent should work. The best part is that it lets the workflow evolve with me.
 
