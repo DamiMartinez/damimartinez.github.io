@@ -86,6 +86,20 @@ In the previous post I made Terminal.app, tmux, Neovim, and Claude Code agree on
 
 Again, this is not essential to coding. But the agent is now part of the terminal environment I stare at for hours, so being able to make it consistent matters. The theme is just a file in my Pi configuration, not a feature request or a workaround.
 
+## Community packages: borrow what already works
+
+The extension API is not only for things I build myself. Pi packages bundle extensions, skills, prompt templates, and themes so the community can distribute a whole capability through npm or Git. The [package gallery](https://pi.dev/packages) is a good place to browse them, and installing one is as simple as:
+
+```bash
+pi install npm:<package-name>
+```
+
+The one I have installed is [`pi-web-access`](https://github.com/nicobailon/pi-web-access). It adds web search and content extraction, so Pi can research a current question, fetch a readable page, inspect a GitHub repository, or work with PDFs and videos when the task needs it. It is useful, but it is also a good example of the philosophy here: it is available when I need it, not an opaque feature that I have to accept as part of a much larger default harness.
+
+There are already packages for workflows I am interested in but have not installed yet. [`pi-subagents`](https://github.com/jwu/pi-subagents), for example, can delegate tasks to isolated child Pi sessions with their own contexts and configurations. [`pi-mcp-adapter`](https://github.com/nicobailon/pi-mcp-adapter) takes a token-conscious approach to MCP: instead of loading every connected MCP tool definition into context up front, it exposes discovery and starts servers only when they are needed.
+
+That ecosystem means I can choose between installing a proven community solution, adapting one, or writing the narrow extension that fits my workflow. As with any code that runs inside an agent with access to my machine, I read the source before installing a package.
+
 ## The trade-off: you own the harness
 
 The flexibility comes with responsibility. Pi extensions run with the permissions of the local user, so I only load code I trust. A custom safety extension is only as good as the assumptions in its implementation. And when I build my own workflow, I have to maintain it.
