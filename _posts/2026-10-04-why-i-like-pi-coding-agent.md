@@ -10,6 +10,8 @@ I like it a lot, mostly because it starts from a different premise than the big 
 
 Pi still gives you the essential agent loop, a terminal UI, sessions, model selection, and tools for reading, editing, writing, and running commands. But it deliberately stays small. Extensions, skills, prompt templates, model configuration, themes, and MCP servers are all things you choose to add. That matters more to me than it sounded like it would.
 
+![Pi startup showing my loaded AGENTS.md context, skills, and extensions](/images/pi-coding-agent-loaded-resources.png)
+
 ## A smaller default context is a feature
 
 With an opinionated coding agent, you usually receive a lot at once: built-in instructions, a fixed approval system, integrations you may not use, and product-specific behaviour that is always part of the conversation. That can be convenient, but it also means carrying context and complexity that may not fit the way you work.
