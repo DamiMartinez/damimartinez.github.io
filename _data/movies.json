@@ -1,5 +1,13 @@
 [
   {
+    "title": "The Drama",
+    "year": 2026,
+    "rating": 4.0,
+    "watched_date": "2026-10-04",
+    "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/0/5/4/9/4/1205494-the-drama-0-600-0-900-crop.jpg?v=2320acafd5",
+    "link": "https://letterboxd.com/damiavr/film/the-drama/"
+  },
+  {
     "title": "Kneecap",
     "year": 2024,
     "rating": 3.5,
@@ -390,13 +398,5 @@
     "watched_date": "2025-09-28",
     "poster": "https://a.ltrbxd.com/resized/film-poster/7/8/4/3/2/8/784328-oppenheimer-0-600-0-900-crop.jpg?v=e3c6e7a32c",
     "link": "https://letterboxd.com/damiavr/film/oppenheimer-2023/"
-  },
-  {
-    "title": "The Batman",
-    "year": 2022,
-    "rating": 3.5,
-    "watched_date": "2025-09-27",
-    "poster": "https://a.ltrbxd.com/resized/film-poster/3/4/8/9/1/4/348914-the-batman-0-600-0-900-crop.jpg?v=ec12a8b7ce",
-    "link": "https://letterboxd.com/damiavr/film/the-batman/"
   }
 ]
