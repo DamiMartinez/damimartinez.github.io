@@ -1,5 +1,13 @@
 [
   {
+    "title": "Tony",
+    "year": 2026,
+    "rating": 4.0,
+    "watched_date": "2026-11-01",
+    "poster": "https://a.ltrbxd.com/resized/film-poster/1/2/0/9/0/0/1/1209001-tony-2026-0-600-0-900-crop.jpg?v=63ce7b9234",
+    "link": "https://letterboxd.com/damiavr/film/tony-2026/"
+  },
+  {
     "title": "The Drama",
     "year": 2026,
     "rating": 4.0,
@@ -390,13 +398,5 @@
     "watched_date": "2025-10-05",
     "poster": "https://a.ltrbxd.com/resized/film-poster/9/4/6/1/3/1/946131-fremont-0-600-0-900-crop.jpg?v=bc54993de4",
     "link": "https://letterboxd.com/damiavr/film/fremont/"
-  },
-  {
-    "title": "Oppenheimer",
-    "year": 2023,
-    "rating": 3.5,
-    "watched_date": "2025-09-28",
-    "poster": "https://a.ltrbxd.com/resized/film-poster/7/8/4/3/2/8/784328-oppenheimer-0-600-0-900-crop.jpg?v=e3c6e7a32c",
-    "link": "https://letterboxd.com/damiavr/film/oppenheimer-2023/"
   }
 ]
