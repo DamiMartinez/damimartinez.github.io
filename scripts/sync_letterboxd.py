@@ -4,6 +4,8 @@
 import json
 import re
 import sys
+import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -25,8 +27,19 @@ USER_AGENT = (
 
 def fetch_feed(url: str) -> bytes:
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return response.read()
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                return response.read()
+        except (urllib.error.URLError, TimeoutError) as exc:
+            if isinstance(exc, urllib.error.HTTPError) and exc.code != 429 and exc.code < 500:
+                raise
+            if attempt == 2:
+                raise
+            delay = 2 ** attempt
+            print(f"Feed fetch failed ({exc}); retrying in {delay}s", file=sys.stderr)
+            time.sleep(delay)
+    raise RuntimeError("Unreachable")
 
 
 def parse_items(feed_xml: bytes) -> list[dict]:
