@@ -1,5 +1,21 @@
 [
   {
+    "title": "Drive My Car",
+    "year": 2021,
+    "rating": 3.5,
+    "watched_date": "2026-11-08",
+    "poster": "https://a.ltrbxd.com/resized/film-poster/6/7/9/2/9/1/679291-drive-my-car-0-600-0-900-crop.jpg?v=9e1f7c9f35",
+    "link": "https://letterboxd.com/damiavr/film/drive-my-car/"
+  },
+  {
+    "title": "Omaha",
+    "year": 2025,
+    "rating": 2.5,
+    "watched_date": "2026-11-06",
+    "poster": "https://a.ltrbxd.com/resized/film-poster/1/1/1/7/2/1/5/1117215-omaha-0-600-0-900-crop.jpg?v=de8bed4dd0",
+    "link": "https://letterboxd.com/damiavr/film/omaha/"
+  },
+  {
     "title": "Tony",
     "year": 2026,
     "rating": 4.0,
@@ -382,21 +398,5 @@
     "watched_date": "2025-10-19",
     "poster": "https://a.ltrbxd.com/resized/sm/upload/2l/py/pm/ea/uMJhOiPpSuDFbJc5z6c8hD9h8CQ-0-600-0-900-crop.jpg?v=694831ca40",
     "link": "https://letterboxd.com/damiavr/film/a-bigger-splash-2015/"
-  },
-  {
-    "title": "Zero Dark Thirty",
-    "year": 2012,
-    "rating": 2.5,
-    "watched_date": "2025-10-11",
-    "poster": "https://a.ltrbxd.com/resized/film-poster/8/0/3/4/9/80349-zero-dark-thirty-0-600-0-900-crop.jpg?v=9d9601323b",
-    "link": "https://letterboxd.com/damiavr/film/zero-dark-thirty/"
-  },
-  {
-    "title": "Fremont",
-    "year": 2023,
-    "rating": 3.0,
-    "watched_date": "2025-10-05",
-    "poster": "https://a.ltrbxd.com/resized/film-poster/9/4/6/1/3/1/946131-fremont-0-600-0-900-crop.jpg?v=bc54993de4",
-    "link": "https://letterboxd.com/damiavr/film/fremont/"
   }
 ]
