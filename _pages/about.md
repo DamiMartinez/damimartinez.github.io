@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<img src="/images/damian_website.png" alt="Damian Martinez Carmona" class="about-portrait" />
+<img src="/images/damian_website_portrait.png" alt="Damian Martinez Carmona" class="about-portrait" />
 
 Hey! I'm **Damian Martinez Carmona**, a tech entrepreneur and engineer with years of experience building online products and data platforms.
 
