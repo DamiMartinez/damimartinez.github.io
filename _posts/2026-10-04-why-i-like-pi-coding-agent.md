@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why I Like Pi Coding Agent: Build the Harness You Actually Need"
-categories: [AI, Coding Agents, Terminal, Productivity]
+categories: [Pi Agent, AI, Coding Agents, Terminal, Productivity]
 ---
 
 The last two posts were about making the terminal my main workplace: tmux, Neovim, lazygit, and a theme I can comfortably look at all day. The other program now permanently open in that setup is [Pi](https://github.com/earendil-works/pi), a coding agent I have been using for the last month.

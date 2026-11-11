@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building a Live Pi Session Dashboard with tmux"
-categories: [AI, Coding Agents, Terminal, Productivity]
+categories: [Pi Agent, AI, Coding Agents, Terminal, Productivity]
 ---
 
 In my [previous post about Pi](/why-i-like-pi-coding-agent/), I wrote about why I like a coding agent that lets me build the harness I actually need. I ended with an idea: make it easier to work with multiple Pi sessions without leaving the terminal.
